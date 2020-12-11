@@ -15,11 +15,11 @@ const countNeighbors = (m, seatRow, seatCol) => {
             ii +=  directions[k][0]
             jj += directions[k][1];
             if (ii < 0 || ii >= m.length) continue
-            if (jj < 0 || jj >= m[0].length || (ii === seatRow && jj === seatCol)) continue
-                if (m[ii][jj] === '#') {
-                    neighbors++;
-                    break;
-            }
+                if (jj < 0 || jj >= m[0].length || (ii === seatRow && jj === seatCol)) continue
+                    if (m[ii][jj] === '#') {
+                        neighbors++;
+                        break;
+                }
             if(m[ii][jj] === 'L') break
         }
     }
