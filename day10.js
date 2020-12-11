@@ -9,7 +9,7 @@ const damschkie = (arr, storage) => {
     let sum = 1;
     for(var i = 0 ; i < arr.length; i++){
         if (arr[i+2]-arr[i] <= 3) {
-            sum += rec([arr[i],...arr.slice(i+2)], storage)
+            sum += damschkie([arr[i],...arr.slice(i+2)], storage)
         }
     }
     storage[key] = sum;
