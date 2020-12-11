@@ -19,8 +19,6 @@ for (var i = 0; i < parsedInput.length - 25; i++) {
 
 
 //b
-const data = require("fs").readFileSync("input.txt", "utf8");
-const parsedInput = data.split(/\r\n/g).map(x => parseInt(x.split(" ")))
 
 var sum =0;
 for (var i = 0; i < parsedInput.length ; i++) {
