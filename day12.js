@@ -23,14 +23,8 @@ stepBoat = (x) => {
     shipX += (x * pointX)
     shipY += (x * pointY)
 }
-moveBoat = (x) => {
-    if (pointX >= 0 && pointY >= 0) stepBoat(x)
-    else if (pointX >= 0 && pointY <= 0) stepBoat(x) 
-    else if (pointX <= 0 && pointY >= 0) stepBoat(x)
-    else if (pointX <= 0 && pointY <= 0) stepBoat(x)
-}
 
-parsedInput.map(x => ((x.key === 'F') ? moveBoat(x.value) :
+parsedInput.map(x => ((x.key === 'F') ? stepBoat(x.value) :
     (x.key === 'E') ? pointX += x.value :
         (x.key === 'S') ? pointY -= x.value :
             (x.key === 'W') ? pointX -= x.value :
